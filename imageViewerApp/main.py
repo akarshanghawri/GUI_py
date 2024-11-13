@@ -5,11 +5,11 @@ root = Tk()
 root.title("Image Viewer App")  # title of the window
 
 # Load images and add them to an image list
-my_img1 = ImageTk.PhotoImage(Image.open("GUI/imageViewerApp/img/img1.png"))
-my_img2 = ImageTk.PhotoImage(Image.open("GUI/imageViewerApp/img/img2.png"))
-my_img3 = ImageTk.PhotoImage(Image.open("GUI/imageViewerApp/img/img3.png"))
-my_img4 = ImageTk.PhotoImage(Image.open("GUI/imageViewerApp/img/img4.png"))
-my_img5 = ImageTk.PhotoImage(Image.open("GUI/imageViewerApp/img/img5.png"))
+my_img1 = ImageTk.PhotoImage(Image.open("imageViewerApp/img/img1.png"))
+my_img2 = ImageTk.PhotoImage(Image.open("imageViewerApp/img/img2.png"))
+my_img3 = ImageTk.PhotoImage(Image.open("imageViewerApp/img/img3.png"))
+my_img4 = ImageTk.PhotoImage(Image.open("imageViewerApp/img/img4.png"))
+my_img5 = ImageTk.PhotoImage(Image.open("imageViewerApp/img/img5.png"))
 
 image_list = [my_img1, my_img2, my_img3, my_img4, my_img5]
 
