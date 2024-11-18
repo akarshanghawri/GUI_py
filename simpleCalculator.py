@@ -7,6 +7,10 @@ root.title("Simple Calculator")  # Window title
 e = Entry(root, width=35, borderwidth=5)
 e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
+# adding a frame 
+frame = LabelFrame(root,text="calculator",padx=10,pady=10)
+frame.grid(row=1, column=0, columnspan=3, padx=10, pady=10)
+
 # Function to handle number button clicks
 def button_click(number):
     current = e.get()      # Get the current text in the entry
@@ -67,24 +71,24 @@ def button_equal():
         e.insert(0, f_num / int(second_number))
 
 # Define number buttons with their respective commands
-button_1 = Button(root, text="1", padx=42, pady=20, command=lambda: button_click(1))
-button_2 = Button(root, text="2", padx=40, pady=20, command=lambda: button_click(2))
-button_3 = Button(root, text="3", padx=40, pady=20, command=lambda: button_click(3))
-button_4 = Button(root, text="4", padx=40, pady=20, command=lambda: button_click(4))
-button_5 = Button(root, text="5", padx=40, pady=20, command=lambda: button_click(5))
-button_6 = Button(root, text="6", padx=40, pady=20, command=lambda: button_click(6))
-button_7 = Button(root, text="7", padx=40, pady=20, command=lambda: button_click(7))
-button_8 = Button(root, text="8", padx=40, pady=20, command=lambda: button_click(8))
-button_9 = Button(root, text="9", padx=40, pady=20, command=lambda: button_click(9))
-button_0 = Button(root, text="0", padx=40, pady=20, command=lambda: button_click(0))
+button_1 = Button(frame, text="1", padx=42, pady=20, command=lambda: button_click(1))
+button_2 = Button(frame, text="2", padx=40, pady=20, command=lambda: button_click(2))
+button_3 = Button(frame, text="3", padx=40, pady=20, command=lambda: button_click(3))
+button_4 = Button(frame, text="4", padx=40, pady=20, command=lambda: button_click(4))
+button_5 = Button(frame, text="5", padx=40, pady=20, command=lambda: button_click(5))
+button_6 = Button(frame, text="6", padx=40, pady=20, command=lambda: button_click(6))
+button_7 = Button(frame, text="7", padx=40, pady=20, command=lambda: button_click(7))
+button_8 = Button(frame, text="8", padx=40, pady=20, command=lambda: button_click(8))
+button_9 = Button(frame, text="9", padx=40, pady=20, command=lambda: button_click(9))
+button_0 = Button(frame, text="0", padx=40, pady=20, command=lambda: button_click(0))
 
 # Define operation and utility buttons
-button_add = Button(root, text="+", padx=39, pady=20, command=button_add)
-button_sub = Button(root, text="-", padx=39, pady=20, command=button_sub)
-button_mul = Button(root, text="*", padx=39, pady=20, command=button_mul)
-button_div = Button(root, text="/", padx=39, pady=20, command=button_div)
-button_equal = Button(root, text="=", padx=99, pady=20, command=button_equal)
-button_clear = Button(root, text="Clear", padx=89, pady=20, command=button_clear)
+button_add = Button(frame, text="+", padx=39, pady=20, command=button_add)
+button_sub = Button(frame, text="-", padx=39, pady=20, command=button_sub)
+button_mul = Button(frame, text="*", padx=39, pady=20, command=button_mul)
+button_div = Button(frame, text="/", padx=39, pady=20, command=button_div)
+button_equal = Button(frame, text="=", padx=99, pady=20, command=button_equal)
+button_clear = Button(frame, text="Clear", padx=89, pady=20, command=button_clear)
 
 # Place the buttons on the screen 
 button_1.grid(row=3, column=0)
