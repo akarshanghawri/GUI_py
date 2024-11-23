@@ -15,13 +15,17 @@ c = conn.cursor()
 # Function to check if any input field is empty
 def isempty():
     if f_name.get() == "" or l_name.get() == "" or college_name.get() == "" or degree.get() == "" or major.get() == "" or graduation_year.get() == "":
+        messagebox.showwarning("Error", "Blank fields not allowed")  # Show warning for blank fields
+        return False
+    if not graduation_year.get().isdigit() :
+        messagebox.showwarning("Error","Graduation Year must be in numbers")
         return False
     return True
 
 # Function to submit a new record to the database
 def submit():
     if isempty() == False:
-        messagebox.showwarning("Error", "Blank fields not allowed")  # Show warning for blank fields
+        pass
     else:
         conn = sqlite3.connect("student_data.db")
         cur = conn.cursor()
