@@ -70,9 +70,8 @@ def show():
     conn.commit()  # Commit changes
     conn.close()  # Close the database connection
 
-# Uncomment and run this block once to create the table
-'''
-conn.execute("""CREATE TABLE addresses(
+# Table Creation
+conn.execute("""CREATE TABLE IF NOT EXISTS addresses(
             f_name text,
             l_name text,
             college_name text,
@@ -80,7 +79,7 @@ conn.execute("""CREATE TABLE addresses(
             major text, 
             graduation_year int
             )""")
-'''
+
 
 # Create entry widgets for user input
 f_name = Entry(root, width=30)
